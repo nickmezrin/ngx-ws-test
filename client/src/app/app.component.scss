@@ -1,0 +1,64 @@
+.values-wrapper {
+    width: 500px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+
+    .value {
+        overflow: hidden;
+        padding: 3px;
+        position: relative;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        img {
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            opacity: .5;
+        }
+    }
+}
+
+.canvas-wrapper {
+    width: 500px;
+    height: 500px;
+}
+
+.fadeFromTop {
+    animation-duration: .6s;
+    animation-name: FadeFromTop;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.fadeFromBottom {
+    animation-iteration-count: 1;
+    animation-duration: .6s;
+    animation-name: FadeFromBottom;
+    animation-fill-mode: forwards;
+}
+
+@keyframes FadeFromTop {
+    from {
+        transform: translateY(-100%)
+    }
+    to {
+        transform: translateY(100%)
+    }
+}
+
+@keyframes FadeFromBottom {
+    from {
+        transform: translateY(100%)
+    }
+    to {
+        transform: translateY(-100%)
+    }
+}

@@ -1,0 +1,15 @@
+<div class="canvas-wrapper">
+  <canvas id="canvas" width="300" height="300">{{ chart }}</canvas>
+</div>
+
+<div class="values-wrapper">
+  <div class="value" *ngFor="let value of currentValues; let i = index">
+    <img class="fadeFromTop" 
+    src="../assets/tiny-arrow-bottom-1-512.png"
+    *ngIf="hasToTopAnimation(i)">
+    <img class="fadeFromBottom" 
+    src="../assets/tiny-arrow-top-1-512.png"
+    *ngIf="hasToBottomAnimation(i)">
+    {{value.value}}
+  </div>
+</div>
